@@ -2,6 +2,7 @@ import sys
 
 
 def ft_check_str(str):
+    '''This function counts the number of characters in a string'''
     try:
         counter = 0
         alpha = 0
