@@ -24,7 +24,7 @@ def checker(str):
                 i += 1
             if not lettre.isalpha():
                 i = 0
-                raise AssertionError("the argument are bad")
+                raise AssertionError("AssertionError: the argument are bad")
     except AssertionError as e:
         print(e)
 
@@ -32,6 +32,7 @@ def checker(str):
 
 
 def ft_morse(str):
+    '''Morse fonction that translate str to morse'''
     try:
         if checker(str) != 0:
             morse_list = [NESTED_MORSE[char.upper()] for char in str]
@@ -44,7 +45,7 @@ def ft_morse(str):
 def main():
     try:
         if len(sys.argv) != 2:
-            raise AssertionError("wrong number of arguments")
+            raise AssertionError("AssertionError: wrong number of arguments")
         str = sys.argv[1]
         ft_morse(str)
     except AssertionError as e:
